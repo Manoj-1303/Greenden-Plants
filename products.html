@@ -14,58 +14,89 @@
     <nav class="bg-green-100 p-3 flex justify-between items-center shadow-xl sticky top-0 z-50 ">
         <h1 class="text-2xl font-bold">Greenden</h1>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden cursor-pointer">
+            id="open-nav"
+            class="w-6 h-6 md:hidden cursor-pointer text-green-900 hover:text-green-700 transition duration-200">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
         <ul class="flex gap-5 text-gray-600 hidden md:flex">
-            <li><a href="index.html" class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Home</a></li>
-            <li><a href="products.html" class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Products</a></li>
-            <li><a href="contact.html" class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Contact</a></li>
+            <li><a href="index.html"
+                    class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Home</a>
+            </li>
+            <li><a href="products.html"
+                    class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Products</a>
+            </li>
+            <li><a href="contact.html"
+                    class="inline-block transform hover:-translate-y-1 transition duration-200 hover:text-black">Contact</a>
+            </li>
         </ul>
     </nav>
+    <div id="side-nav-overlay"
+        class="fixed inset-0 bg-black bg-opacity-30 backdrop-filter backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out md:hidden z-40"></div>
+    <!--Side Navbar-->
+    <section id="side-nav"
+        class="md:hidden bg-gradient-to-b from-green-50 to-green-100 fixed z-50 top-0 right-0 w-4/5 max-w-xs h-screen shadow-2xl border-l border-green-200 transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between px-5 py-4 border-b border-green-200">
+            <h1 class="text-2xl font-bold text-green-900">Greenden</h1>
+            <p id="close-nav"
+                class="cursor-pointer inline-flex items-center justify-center w-9 h-9 rounded-full text-green-900 bg-white hover:bg-green-200 transition duration-200">
+                ✕</p>
+        </div>
+        <ul class="flex flex-col gap-4 text-gray-700 p-6 font-medium">
+            <li><a href="index.html"
+                    class="block rounded-lg px-4 py-3 bg-white shadow-sm hover:shadow-md hover:bg-green-200 transform hover:-translate-y-0.5 transition duration-200">Home</a>
+            </li>
+            <li><a href="products.html"
+                    class="block rounded-lg px-4 py-3 bg-white shadow-sm hover:shadow-md hover:bg-green-200 transform hover:-translate-y-0.5 transition duration-200">Products</a>
+            </li>
+            <li><a href="contact.html"
+                    class="block rounded-lg px-4 py-3 bg-white shadow-sm hover:shadow-md hover:bg-green-200 transform hover:-translate-y-0.5 transition duration-200">Contact</a>
+            </li>
+        </ul>
+    </section>
+
     <!--Products Section-->
     <section class="p-10 text-center">
         <h1 class="text-3xl font-bold text-dark">Our Products</h1>
-        <input type="text" class="border border-black p-2 m-3" style="width: 80%;">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+        <input type="text" id="product-search" class="border border-black p-2 m-3" style="width: 80%;">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
             <div>
-                <img src="Images/bestseller_1.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_1.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Moth Orchid</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="Images/bestseller_5.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_5.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Snake Plant</h1>
                 <p>$30</p>
             </div>
             <div>
-                <img src="Images/bestseller_3.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_3.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Paperwhite Narcissus</h1>
                 <p>$25</p>
             </div>
             <div>
-                <img src="Images/bestseller_6.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_6.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Chinese Evergreen</h1>
                 <p>$35</p>
             </div>
             <div>
-                <img src="Images/bestseller_7.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_7.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Calathea</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="Images/bestseller_2.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_2.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Marigold Plant</h1>
                 <p>$30</p>
             </div>
             <div>
-                <img src="Images/bestseller_8.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_8.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Red Rose Plant</h1>
                 <p>$25</p>
             </div>
             <div>
-                <img src="Images/bestseller_4.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
+                <img src="/Images/bestseller_4.jpg" class="inline object-cover w-[200px] h-[200px] hover:shadow-xl transform hover:-translate-y-3 transition duration-300 ease-in-out">
                 <h1>Cherry Blossoms</h1>
                 <p>$35</p>
             </div>
@@ -77,6 +108,8 @@
         <p>Your one-stop shop for all things green!</p>
         <p>@ 2025 Greenden. All rights reserved.</p>
     </section>
+
+    <script src="product.js"></script>
 </body>
 
 </html>
